@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE BILLION DOLLAR BLUEPRINT | Khirye Tyler x 1500 or Nothing</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8D48B;
+  --gold-dark: #A07D1C;
+  --black: #0A0A0A;
+  --dark: #111111;
+  --dark-2: #1A1A1A;
+  --dark-3: #222222;
+  --white: #FAFAFA;
+  --gray: #888888;
+  --gray-light: #AAAAAA;
+  --green: #00C853;
+  --red: #FF3D00;
+  --blue: #2979FF;
+  --purple: #AA00FF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+nav .nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+nav .nav-links a {
+  color: var(--gray-light);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+nav .nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 .gold { color: var(--gold); }
+.hero .subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--gray-light);
+  max-width: 700px;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat .number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.hero-stat .label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 0.5rem;
+}
+
+/* SECTIONS */
+section {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.section-label {
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.section-text {
+  color: var(--gray-light);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 800px;
+}
+
+/* CARDS */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: var(--dark-2);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.4s ease;
+}
+.card:hover {
+  border-color: rgba(201,168,76,0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(201,168,76,0.08);
+}
+.card .card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.card p {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* DOING RIGHT / WRONG */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .analysis-grid { grid-template-columns: 1fr; }
+}
+.analysis-col {
+  background: var(--dark-2);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(201,168,76,0.1);
+}
+.analysis-col.right { border-left: 3px solid var(--green); }
+.analysis-col.wrong { border-left: 3px solid var(--red); }
+.analysis-col h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.analysis-col.right h3 { color: var(--green); }
+.analysis-col.wrong h3 { color: var(--red); }
+.analysis-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.analysis-item:last-child { border-bottom: none; }
+.analysis-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.analysis-item p {
+  font-size: 0.85rem;
+  color: var(--gray-light);
+  line-height: 1.6;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin-top: 3rem;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--gold-dark), transparent);
+}
+.timeline-item {
+  position: relative;
+  padding: 0 0 3rem 2rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -0.45rem;
+  top: 0.3rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--black);
+}
+.timeline-item .year {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--gold);
+}
+.timeline-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+}
+.timeline-item p {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* REVENUE TABLE */
+.revenue-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+.revenue-table th {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold-dark);
+  font-weight: 700;
+}
+.revenue-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--gray-light);
+}
+.revenue-table tr:hover td {
+  background: rgba(201,168,76,0.03);
+}
+.revenue-table .highlight {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* BIG NUMBER */
+.big-number-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+.big-number-card {
+  background: var(--dark-2);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+.big-number-card .value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.big-number-card .desc {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 0.5rem;
+}
+
+/* QUOTE */
+.quote-block {
+  background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02));
+  border-left: 3px solid var(--gold);
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  border-radius: 0 12px 12px 0;
+}
+.quote-block p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--white);
+}
+.quote-block .attribution {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--gold);
+  margin-top: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* CTA */
+.cta-section {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.06) 0%, transparent 70%);
+}
+.cta-section .section-title { margin-bottom: 1rem; }
+.cta-btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--gold);
+  color: var(--black);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.3s;
+  margin-top: 2rem;
+}
+.cta-btn:hover {
+  background: var(--gold-light);
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(201,168,76,0.3);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(201,168,76,0.1);
+  font-size: 0.75rem;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+
+/* BADGE */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.badge-gold { background: rgba(201,168,76,0.15); color: var(--gold); }
+.badge-green { background: rgba(0,200,83,0.15); color: var(--green); }
+.badge-red { background: rgba(255,61,0,0.15); color: var(--red); }
+.badge-blue { background: rgba(41,121,255,0.15); color: var(--blue); }
+.badge-purple { background: rgba(170,0,255,0.15); color: var(--purple); }
+
+/* LIST */
+.styled-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+.styled-list li {
+  padding: 0.6rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.styled-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* FULLWIDTH BG */
+.full-bg {
+  background: var(--dark);
+  padding: 5rem 0;
+}
+.full-bg .inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* PARTNERSHIP COMPARISON */
+.partner-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .partner-grid { grid-template-columns: 1fr; }
+}
+.partner-card {
+  background: var(--dark-2);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+.partner-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.partner-card .role {
+  color: var(--gold);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.partner-plus {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--gold);
+  text-align: center;
+}
+
+/* TECH STACK */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.tech-item {
+  background: var(--dark-2);
+  border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.tech-item h4 {
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.tech-item p {
+  color: var(--gray-light);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.1); }
+  50% { box-shadow: 0 0 40px rgba(201,168,76,0.25); }
+}
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* CONFIDENTIAL STAMP */
+.confidential-watermark {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 999;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 4px;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.4);
+  background: rgba(10,10,10,0.9);
+  backdrop-filter: blur(10px);
+}
+
+/* GLOWING CARD */
+.card-glow {
+  position: relative;
+  overflow: hidden;
+}
+.card-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(201,168,76,0.1), transparent 30%);
+  animation: rotate 8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.card-glow:hover::before {
+  opacity: 1;
+}
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+/* PROGRESS BAR */
+.scroll-progress {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+  z-index: 1001;
+  transition: width 0.1s;
+}
+
+/* FINANCIAL REALITY CARDS */
+.financial-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .financial-comparison { grid-template-columns: 1fr; }
+}
+.fin-card {
+  background: var(--dark-2);
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 1px solid rgba(201,168,76,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.fin-card.current::after {
+  content: 'NOW';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.2rem 0.75rem;
+  background: rgba(255,61,0,0.15);
+  color: var(--red);
+  border-radius: 100px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.fin-card.future::after {
+  content: 'POTENTIAL';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.2rem 0.75rem;
+  background: rgba(0,200,83,0.15);
+  color: var(--green);
+  border-radius: 100px;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.fin-card .fin-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.fin-card.current .fin-amount { color: var(--gray-light); }
+.fin-card.future .fin-amount { color: var(--gold); }
+.fin-card .fin-label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+.fin-card .fin-breakdown {
+  list-style: none;
+}
+.fin-card .fin-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  font-size: 0.85rem;
+  color: var(--gray-light);
+}
+.fin-card .fin-breakdown li span:last-child {
+  font-weight: 600;
+}
+.fin-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--gold);
+}
+@media (max-width: 768px) {
+  .fin-arrow { transform: rotate(90deg); }
+}
+
+/* EXISTING INFRASTRUCTURE */
+.infra-banner {
+  background: linear-gradient(135deg, rgba(0,200,83,0.08), rgba(201,168,76,0.08));
+  border: 1px solid rgba(0,200,83,0.2);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+.infra-banner .infra-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.infra-banner h4 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+.infra-banner p {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* THIRD PILLAR */
+.pillar-section {
+  background: linear-gradient(135deg, rgba(170,0,255,0.05), rgba(201,168,76,0.05));
+  border: 1px solid rgba(170,0,255,0.15);
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+.pillar-section h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.pillar-section .pillar-role {
+  color: var(--purple);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* MOBILE HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.hamburger span {
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+  transition: all 0.3s;
+}
+.nav-links.open {
+  display: flex !important;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: rgba(10,10,10,0.98);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  gap: 1rem;
+}
+
+/* ACCELERATION BANNER */
+.accel-banner {
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease infinite;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.accel-banner p {
+  color: var(--black);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.accel-banner span {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .big-number-row { grid-template-columns: repeat(2, 1fr); }
+  .financial-comparison { grid-template-columns: 1fr; }
+  .infra-banner { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .section-title { font-size: 1.5rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .partner-grid { grid-template-columns: 1fr; }
+  .fin-card .fin-amount { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- CONFIDENTIAL WATERMARK -->
+<div class="confidential-watermark">CONFIDENTIAL</div>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">1500 x BLACK SUIT</div>
+  <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#dossier">Dossier</a></li>
+    <li><a href="#financial-reality">Financials</a></li>
+    <li><a href="#analysis">Analysis</a></li>
+    <li><a href="#blueprint">Blueprint</a></li>
+    <li><a href="#partnership">Partnership</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#proposal">Proposal</a></li>
+    <li><a href="#pitch">The Pitch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Confidential Strategic Intelligence Report</div>
+  <h1>THE <span class="gold">BILLION DOLLAR</span><br>BLUEPRINT</h1>
+  <p class="subtitle">A financial intelligence dossier and strategic partnership proposal for <strong>Khirye Tyler</strong> &mdash; from the desk of <strong>Larrance Dopson</strong>, 1500 or Nothing</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="number">2x</div>
+      <div class="label">Grammy Winner</div>
+    </div>
+    <div class="hero-stat">
+      <div class="number">7</div>
+      <div class="label">Cowboy Carter Tracks</div>
+    </div>
+    <div class="hero-stat">
+      <div class="number">690M+</div>
+      <div class="label">"The Box" Streams</div>
+    </div>
+    <div class="hero-stat">
+      <div class="number">$1B</div>
+      <div class="label">Target Valuation</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- DOSSIER -->
+<section id="dossier">
+  <div class="section-label reveal">Intelligence Dossier</div>
+  <h2 class="section-title reveal">Who Is Khirye Tyler?</h2>
+  <p class="section-text">A 2x Grammy-winning songwriter, producer, multi-instrumentalist, musical director, and educator from Mansfield, Ohio. Grew up in foster care with 15 other kids. Started playing piano in church at age 9. Produced his first full album at 18 for gospel group Isaac Simpson &amp; DP. Played piano doubles for Ryan Gosling in La La Land. Now stands as Beyonce's musical director &mdash; married with five children, still lives in Ohio, and one of the most versatile musicians alive.</p>
+
+  <div class="big-number-row">
+    <div class="big-number-card">
+      <div class="value">135K</div>
+      <div class="desc">Instagram Followers</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">2008</div>
+      <div class="desc">Mansfield Senior Grad</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">5</div>
+      <div class="desc">Children (Family Man)</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">10+</div>
+      <div class="desc">Instruments Played</div>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <p>"Ya'll... I'm Beyonce's musical director. That alone changed my life."</p>
+    <div class="attribution">&mdash; Khirye Tyler, Instagram</div>
+  </div>
+
+  <h3 style="margin-top:2.5rem; font-size:1.2rem; margin-bottom:1rem;">Career Timeline</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">2008</div>
+      <h4>Mansfield Senior High Graduation</h4>
+      <p>Moves to Columbus, Ohio. Produces first full-length gospel album at age 18.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2016</div>
+      <h4>La La Land &mdash; Ryan Gosling's Piano Doubles</h4>
+      <p>Plays piano for Ryan Gosling's character Sebastian in the Oscar-winning film. Establishes Black Suit Music LLC.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2018</div>
+      <h4>Meek Mill &mdash; Championships</h4>
+      <p>Major label production credit. Begins working closely with 1500 or Nothin' production team.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2019</div>
+      <h4>Roddy Ricch &mdash; "The Box" <span class="badge badge-gold">Grammy Nominated</span></h4>
+      <p>Co-writes the #1 hit alongside Larrance Dopson, 30 Roc, and others. Nominated for Song of the Year and Best Rap Song. 690M+ Spotify streams.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2020</div>
+      <h4>Khalid &mdash; "Eleven" + NBC Songland</h4>
+      <p>RED Hands band featured as house band on NBC's Songland. Co-writes with Khalid.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2023</div>
+      <h4>Beyonce Renaissance World Tour <span class="badge badge-purple">Musical Director</span></h4>
+      <p>Serves as Co-Musical Director (with Dammo Farmer) for 56 shows across 5 continents. Tour generates $500M+. Appears in the concert film as Silver Horse Band keyboardist. Contributes to tour film end-credits song "My House."</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2024</div>
+      <h4>Beyonce &mdash; Cowboy Carter <span class="badge badge-gold">2x Grammy Winner</span></h4>
+      <p>Credits across 7 tracks including "TEXAS HOLD 'EM," "Ya Ya," "BLACKBIIRD," "Spaghettii." Writing, bass, percussion, drums, synthesizer, strings, violin, piano, guitar, horns, programming. Music Director for the NFL Christmas Day Halftime Show on Netflix.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">2025</div>
+      <h4>67th Grammy Awards &mdash; Double Win</h4>
+      <p>Album of the Year + Best Country Album for Cowboy Carter. RED Hands "Family Reunion" at Rock &amp; Roll Hall of Fame in Cleveland.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:3rem; font-size:1.2rem; margin-bottom:1rem;">Full Artist Collaboration Map</h3>
+  <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;">
+    <span class="badge badge-gold">Beyonce</span>
+    <span class="badge badge-gold">Jay-Z</span>
+    <span class="badge badge-gold">Roddy Ricch</span>
+    <span class="badge badge-blue">Usher</span>
+    <span class="badge badge-blue">Alicia Keys</span>
+    <span class="badge badge-blue">J. Cole</span>
+    <span class="badge badge-blue">Big Sean</span>
+    <span class="badge badge-blue">Chance the Rapper</span>
+    <span class="badge badge-blue">Khalid</span>
+    <span class="badge badge-blue">Meek Mill</span>
+    <span class="badge badge-purple">EarthGang</span>
+    <span class="badge badge-purple">6lack</span>
+    <span class="badge badge-purple">Lucky Daye</span>
+    <span class="badge badge-purple">The-Dream</span>
+    <span class="badge badge-green">La La Land (Ryan Gosling Piano)</span>
+    <span class="badge badge-green">Dolemite Is My Name (Eddie Murphy Film)</span>
+    <span class="badge badge-green">My America (Film)</span>
+    <span class="badge badge-green">NBC Songland (House Band)</span>
+    <span class="badge badge-green">American Song Contest (Ohio Jury)</span>
+    <span class="badge badge-green">Renaissance Film (Silver Horse Band)</span>
+    <span class="badge badge-green">Beyonce Bowl (Netflix Special)</span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- KHIRYE'S CURRENT FINANCIAL REALITY -->
+<section id="financial-reality">
+  <div class="section-label reveal">Financial Intelligence</div>
+  <h2 class="section-title reveal">Khirye's Current Financial Reality</h2>
+  <p class="section-text reveal">An honest look at where Khirye stands financially today &mdash; and the staggering gap between his current income and his market potential.</p>
+
+  <div class="financial-comparison reveal">
+    <div class="fin-card current">
+      <div class="fin-amount">$600K-$900K</div>
+      <div class="fin-label">Estimated Annual Income (2024)</div>
+      <ul class="fin-breakdown">
+        <li><span>Beyonce Tour MD Fee</span><span>$200K-$350K</span></li>
+        <li><span>Publishing/Royalties (Cowboy Carter)</span><span>$100K-$180K</span></li>
+        <li><span>"The Box" Ongoing Royalties</span><span>$50K-$80K/yr</span></li>
+        <li><span>Session Work & Features</span><span>$80K-$120K</span></li>
+        <li><span>Black Suit Music (Drum Kits)</span><span>$10K-$25K</span></li>
+        <li><span>RED Hands Performances</span><span>$30K-$60K</span></li>
+        <li><span>Sync & Licensing</span><span>$30K-$50K</span></li>
+      </ul>
+    </div>
+    <div class="fin-arrow">&#10230;</div>
+    <div class="fin-card future">
+      <div class="fin-amount">$5M-$25M</div>
+      <div class="fin-label">Year 3 Projected (With Platform)</div>
+      <ul class="fin-breakdown">
+        <li><span>Platform Equity Value</span><span>$2M-$8M</span></li>
+        <li><span>CEO Salary + Bonus</span><span>$300K-$500K</span></li>
+        <li><span>Flagship Course Revenue</span><span>$500K-$2M</span></li>
+        <li><span>Publishing (Ongoing)</span><span>$200K-$500K</span></li>
+        <li><span>Speaking & Appearances</span><span>$200K-$500K</span></li>
+        <li><span>Artist Development Rev Share</span><span>$100K-$500K</span></li>
+        <li><span>Licensing & Content Deals</span><span>$500K-$3M</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accel-banner reveal">
+    <p>The partnership compresses the timeline by <span>5-7 years</span></p>
+  </div>
+
+  <div class="big-number-row reveal" style="margin-top:2rem;">
+    <div class="big-number-card">
+      <div class="value">$6.27M</div>
+      <div class="desc">"The Box" Total Earnings (2020)</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$1.5M</div>
+      <div class="desc">Tyler's Est. Lifetime Box Share</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$12-16B</div>
+      <div class="desc">Combined TAM (Music Ed + Tools)</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">0.01%</div>
+      <div class="desc">Market Share Needed for $1B</div>
+    </div>
+  </div>
+
+  <div class="infra-banner reveal">
+    <div class="infra-icon">&#9889;</div>
+    <div>
+      <h4>KEY INTEL: 1500 Sound Academy Already Exists</h4>
+      <p>Larrance Dopson's <strong>1500 Sound Academy</strong> is an Ableton Certified Training Center that meets California CTE (Career Technical Education) standards, with a physical campus in Inglewood, CA. This is not a theoretical concept &mdash; <strong>the infrastructure, curriculum standards, and certification framework already exist.</strong> Khirye doesn't need to build from scratch. He plugs into a running operation and scales it 100x with digital delivery, AI tools, and his unique methodology. This is the single biggest competitive advantage in the entire proposal.</p>
+    </div>
+  </div>
+
+  <div class="pillar-section reveal" style="margin-top:2rem;">
+    <h4>The Third Pillar: James Fauntleroy</h4>
+    <div class="pillar-role">Potential Co-Founding Instructor & Equity Partner</div>
+    <p class="section-text" style="max-width:none;">Intelligence suggests <strong>James Fauntleroy</strong> (Grammy-winning songwriter: "Blinding Lights," Beyonce, Bruno Mars, Rihanna, Jay-Z) as a potential third founding pillar. Fauntleroy brings elite-level songwriting curriculum that complements Tyler's production/arrangement focus and Dopson's beat-making mastery. Together, the three cover the entire music creation stack: <strong>songwriting (Fauntleroy) + production/arrangement (Tyler) + beat-making/engineering (Dopson)</strong>. A 3-headed founding team with this caliber of credentials is unprecedented in education technology.</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ANALYSIS: RIGHT vs WRONG -->
+<section id="analysis">
+  <div class="section-label reveal">Strategic Analysis</div>
+  <h2 class="section-title reveal">What Khirye Is Doing Right &mdash; And What's Missing</h2>
+  <p class="section-text">An honest assessment of strengths to double down on and gaps to close on the path to building a billion-dollar enterprise.</p>
+
+  <div class="analysis-grid">
+    <div class="analysis-col right">
+      <h3>DOING RIGHT</h3>
+
+      <div class="analysis-item">
+        <h4>World-Class Musicianship</h4>
+        <p>Multi-instrumentalist who plays piano, keys, bass, drums, percussion, violin, strings, guitar, horns, and does programming + sound design. This range is extraordinarily rare. He's not a one-trick producer &mdash; he's an entire band in one person.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Beyonce Inner Circle Access</h4>
+        <p>Musical Director for the Renaissance Tour and NFL Halftime Show. This isn't a one-off feature &mdash; it's a recurring trust relationship with the biggest artist alive. This access alone is worth 8 figures in brand equity.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Education DNA</h4>
+        <p>Already posts music theory breakdowns, chord dissections, and arrangement tutorials on Instagram. The educational instinct is natural, not forced. Instagram content showing R&B dissections and chord analysis proves the teaching methodology already exists.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Community Builder (RED Hands)</h4>
+        <p>Built a 6-member band, a label (Black Suit Music), and a community. Hosted "Family Reunion" at the Rock &amp; Roll Hall of Fame. He understands ecosystems, not just solo careers.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Origin Story That Sells</h4>
+        <p>Foster care kid from Mansfield, Ohio &mdash; group home with 15 kids &mdash; who played piano for Ryan Gosling in La La Land, then became Beyonce's musical director, now a 2x Grammy winner raising 5 children. STILL lives in Ohio. This is the most powerful narrative in music business right now. Investors, media, and audiences will rally behind this story.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>1500 or Nothin' Connection</h4>
+        <p>Already has a working relationship with the 1500 team (co-credited on "The Box" with Larrance Dopson). This isn't a cold pitch &mdash; it's a warm handshake.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Genre Fluency</h4>
+        <p>Gospel to hip-hop to country to R&B to film scoring. Cowboy Carter proved he can navigate ANY genre. This makes the education platform universally applicable, not niche.</p>
+      </div>
+    </div>
+
+    <div class="analysis-col wrong">
+      <h3>WHAT'S MISSING</h3>
+
+      <div class="analysis-item">
+        <h4>No Scalable Business Entity</h4>
+        <p>Black Suit Music sells drum kits for pocket change. The label has no visible catalog, no distribution deals, no revenue engine. "SUITS VOL. 1" &mdash; 3 drum tracks &mdash; is not a business. It's a side project. He's sitting on a goldmine and selling pebbles.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Zero Digital Infrastructure</h4>
+        <p>No education platform. No course. No membership site. No email list (that's visible). No YouTube channel at scale. No podcast. 135K Instagram followers but no funnel to convert attention into revenue. The content dies on the timeline.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Undermonetized Credits</h4>
+        <p>7 tracks on Cowboy Carter, "The Box" co-write, Renaissance Tour MD, NFL Halftime &mdash; and no visible consulting practice, no masterclass, no premium mentorship program. Every producer who's done a TENTH of this has a $997 course. Khirye has none.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>No AI/Tech Integration</h4>
+        <p>The industry is moving to AI-assisted production, and Khirye has zero presence in the tech space. No tools, no plugins, no software. He's teaching through Instagram Reels when he should be building an operating system.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Brand Not Positioned for Scale</h4>
+        <p>"Black Suit Music" is a great vibe but not a tech brand. @khirye90 as a handle doesn't signal empire. No professional website. No media kit. No PR strategy capitalizing on the Grammy wins.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>Revenue Concentration Risk</h4>
+        <p>Income likely depends heavily on session work, touring, and publishing splits. If Beyonce moves on or touring slows down, there's no recurring revenue to fall back on. One relationship = one point of failure.</p>
+      </div>
+
+      <div class="analysis-item">
+        <h4>No Equity Position in Anything</h4>
+        <p>He's a hired gun getting W-2/1099 income, not building equity. Musical directors, no matter how talented, don't become billionaires from salary. He needs ownership in a platform, not just credits on an album.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- BLUEPRINT -->
+<div class="full-bg" id="blueprint">
+  <div class="inner">
+    <div class="section-label reveal">The $1 Billion Blueprint</div>
+    <h2 class="section-title reveal">The "OS for OS" Through Education</h2>
+    <p class="section-text">What if someone built the Shopify of music creation education? Not a course platform. Not a YouTube channel. An operating system that every music school, every production academy, and every aspiring producer runs on.</p>
+
+    <div class="quote-block" style="margin:2rem 0;">
+      <p>"Shopify is the OS for commerce. Stripe is the OS for payments. Unity is the OS for games. We're building the OS for how the next generation of music creators learn, create, and earn."</p>
+      <div class="attribution">&mdash; The Vision</div>
+    </div>
+
+    <h3 style="font-size:1.2rem; margin-bottom:1rem; margin-top:2rem;">Platform Architecture</h3>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <h4>Layer 1: Curriculum Engine</h4>
+        <p>AI-powered adaptive learning paths. From beginner to Grammy-ready. Genre-specific tracks: hip-hop, R&B, country, gospel, film scoring. Taught by the people who actually made the hits.</p>
+      </div>
+      <div class="tech-item">
+        <h4>Layer 2: Production Tools</h4>
+        <p>Plugin marketplace, sound kit store, sample library, AI mixing assistant. Every tool a producer needs, integrated into the learning experience. Learn by building, not just watching.</p>
+      </div>
+      <div class="tech-item">
+        <h4>Layer 3: Community + Mentorship</h4>
+        <p>Cohort-based programs, 1-on-1 mentoring with working producers, peer collaboration rooms, networking events. The LinkedIn of music creators.</p>
+      </div>
+      <div class="tech-item">
+        <h4>Layer 4: Certification + Credentialing</h4>
+        <p>Industry-recognized certifications. Partner with universities, labels, and studios. A "Black Suit Certified" producer badge that means something on a resume or sync submission.</p>
+      </div>
+      <div class="tech-item">
+        <h4>Layer 5: Artist Development Pipeline</h4>
+        <p>Top graduates get placed with real artists. Label services for emerging talent. Revenue share model where the platform earns from the success of its graduates.</p>
+      </div>
+      <div class="tech-item">
+        <h4>Layer 6: B2B/Enterprise</h4>
+        <p>License the curriculum to universities (Berklee, Full Sail, etc.), K-12 music programs, correctional education systems, and international music academies. The Salesforce of music ed.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.2rem; margin-top:3rem; margin-bottom:1rem;">Revenue Roadmap to $1B</h3>
+    <table class="revenue-table">
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Timeline</th>
+          <th>Revenue Target</th>
+          <th>Key Milestones</th>
+          <th>Funding</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Foundation</strong></td>
+          <td>Year 1-2</td>
+          <td class="highlight">$1M - $5M</td>
+          <td>Launch platform, first 10K users, flagship courses by Khirye + Larrance, seed partnerships with 3 universities</td>
+          <td>Bootstrap + Angel ($1-2M)</td>
+        </tr>
+        <tr>
+          <td><strong>Growth</strong></td>
+          <td>Year 2-3</td>
+          <td class="highlight">$5M - $25M</td>
+          <td>50K+ users, marketplace launch, B2B deals with 20+ institutions, international expansion, AI tools beta</td>
+          <td>Series A ($10-15M)</td>
+        </tr>
+        <tr>
+          <td><strong>Scale</strong></td>
+          <td>Year 3-5</td>
+          <td class="highlight">$25M - $100M</td>
+          <td>500K+ users, enterprise contracts, artist development pipeline producing chart hits, content library of 1000+ courses</td>
+          <td>Series B ($40-60M)</td>
+        </tr>
+        <tr>
+          <td><strong>Dominance</strong></td>
+          <td>Year 5-8</td>
+          <td class="highlight">$100M - $500M</td>
+          <td>Global standard for music education, hardware partnerships, acquisition of complementary tools, IPO preparation</td>
+          <td>Series C ($100M+)</td>
+        </tr>
+        <tr>
+          <td><strong>Empire</strong></td>
+          <td>Year 8+</td>
+          <td class="highlight">$1B+</td>
+          <td>IPO or strategic acquisition. Platform powers 50%+ of music education globally. Vertical integration complete.</td>
+          <td>Public Market / PE</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-size:1.2rem; margin-top:3rem; margin-bottom:1rem;">5 Revenue Engines</h3>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">01</div>
+        <h3>Education SaaS <span class="badge badge-gold">$300M</span></h3>
+        <p>Subscription platform: $19/mo students, $49/mo pros, $99/mo institutions. At 500K paid subscribers, this alone is $120M ARR. At scale with enterprise: $300M.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">02</div>
+        <h3>Tools Marketplace <span class="badge badge-blue">$200M</span></h3>
+        <p>30% commission on sound kits, plugins, samples, presets, templates. Splice does $100M+ with no education layer. With curriculum integration: $200M.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">03</div>
+        <h3>Artist Development <span class="badge badge-purple">$250M</span></h3>
+        <p>Label services, distribution, sync licensing for platform graduates. 15-20% revenue share on artist earnings. Discover and develop 100+ charting artists: $250M.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">04</div>
+        <h3>Enterprise / B2B <span class="badge badge-green">$150M</span></h3>
+        <p>License curriculum to 500+ universities and schools globally. Government contracts for music education in underserved communities. $300K-$1M per institutional deal: $150M.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">05</div>
+        <h3>IP & Content <span class="badge badge-gold">$100M</span></h3>
+        <p>Documentaries, books, Netflix/Hulu content deals, branded events, masterclass tours. The story of foster care kid to Beyonce's MD to $1B founder is a movie itself: $100M.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- TECHNOLOGY: AGENTIC AI -->
+<section id="technology">
+  <div class="section-label reveal">The Technology Advantage</div>
+  <h2 class="section-title reveal">Agentic AI: The Unfair Advantage Nobody Else Has</h2>
+  <p class="section-text">Here's what changes everything. We're not giving Khirye a website. We're giving him an autonomous AI operating system &mdash; a constellation of specialized agents powered by every major LLM, working 24/7 to build, analyze, grow, and protect his empire.</p>
+
+  <div class="quote-block">
+    <p>"While other producers are posting Instagram Reels and hoping for the best, Khirye will have 30+ AI agents running his business, his education platform, his marketing, his legal, his finances, and his creative pipeline simultaneously. That's not a head start. That's a different sport."</p>
+    <div class="attribution">&mdash; The 1500 Advantage</div>
+  </div>
+
+  <h3 style="margin-top:2rem; font-size:1.2rem; margin-bottom:1rem;">The Agent Terminal: What Khirye Gets</h3>
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-icon">CREATIVE DIRECTOR AI</div>
+      <h3>Brand & Visual Identity</h3>
+      <p>AI agent that maintains brand consistency across all platforms, generates social content calendars, designs marketing assets, and ensures Black Suit Music evolves from a label name into a global brand.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">REVENUE ARCHITECT AI</div>
+      <h3>Financial Intelligence</h3>
+      <p>Tracks all royalty streams, publishing splits, sync placements. Identifies undermonetized credits. Projects revenue scenarios. Manages invoicing and payment collection automatically.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">CONTENT STRATEGIST AI</div>
+      <h3>Content Engine</h3>
+      <p>Transforms every studio session, every lesson, every Instagram Live into repurposed content across YouTube, TikTok, newsletters, and the education platform. One input = 20 outputs.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">PRODUCT STRATEGIST AI</div>
+      <h3>Platform Development</h3>
+      <p>Manages the education platform roadmap. Analyzes user behavior. Recommends curriculum updates. A/B tests pricing. Optimizes the conversion funnel from free user to paid subscriber.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">RESEARCH ANALYST AI</div>
+      <h3>Market Intelligence</h3>
+      <p>Monitors competitors (MasterClass, Splice, Skillshare), tracks music industry trends, identifies partnership opportunities, and provides weekly intelligence briefs.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">GENERAL COUNSEL AI</div>
+      <h3>Legal & IP Protection</h3>
+      <p>Scans contracts before signing. Protects publishing rights. Manages trademark filings. Ensures every collaboration agreement, every platform TOS, every NDA is airtight.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">DATA ARCHITECT AI</div>
+      <h3>Analytics & Insights</h3>
+      <p>Dashboards showing real-time platform metrics, student progress, revenue per course, churn analysis, LTV calculations. Data-driven decision making at every level.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">SECURITY ARCHITECT AI</div>
+      <h3>8-Layer FORTRESS Security</h3>
+      <p>Protects the platform, the IP, the financial data, the user information. Secret scanning, dependency auditing, compliance checking, and 24/7 threat monitoring.</p>
+    </div>
+  </div>
+
+  <div class="big-number-row" style="margin-top:2rem;">
+    <div class="big-number-card">
+      <div class="value">30+</div>
+      <div class="desc">AI Agents Working 24/7</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">4</div>
+      <div class="desc">LLM Models Integrated</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$0</div>
+      <div class="desc">Additional Salary Cost</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">10x</div>
+      <div class="desc">Execution Speed</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PARTNERSHIP -->
+<section id="partnership">
+  <div class="section-label reveal">The Alliance</div>
+  <h2 class="section-title reveal">Dopson x Tyler: The Partnership That Changes Everything</h2>
+  <p class="section-text">Two Grammy-winning producers. Two different superpowers. One vision. The producers who made the hits are now building the system that makes producers.</p>
+
+  <div class="partner-grid">
+    <div class="partner-card">
+      <h3>Larrance Dopson</h3>
+      <div class="role">1500 or Nothing</div>
+      <ul class="styled-list">
+        <li>Grammy-winning super-producer</li>
+        <li>Credits: Kendrick Lamar, Jay-Z, Dr. Dre, Rihanna, Snoop Dogg</li>
+        <li>1500 or Nothing brand &amp; studio infrastructure</li>
+        <li>Autonomous AI terminal (30+ agents)</li>
+        <li>Existing tech stack &amp; development team</li>
+        <li>Industry network spanning 6,619+ contacts</li>
+        <li>Capital access &amp; investor relationships</li>
+      </ul>
+    </div>
+    <div class="partner-plus">+</div>
+    <div class="partner-card">
+      <h3>Khirye Tyler</h3>
+      <div class="role">Black Suit Music</div>
+      <ul class="styled-list">
+        <li>2x Grammy winner (Cowboy Carter)</li>
+        <li>Beyonce's Musical Director</li>
+        <li>Multi-instrumentalist (10+ instruments)</li>
+        <li>Natural educator &amp; curriculum designer</li>
+        <li>RED Hands band &amp; community builder</li>
+        <li>Foster care story = narrative gold</li>
+        <li>Genre fluency: gospel to country to hip-hop</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="font-size:1.2rem; margin-top:3rem; margin-bottom:1rem;">Combined Superpower</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Brand Moat</h3>
+      <p><strong>Beyonce + Kendrick Lamar producer lineage.</strong> No other music education platform can claim credits from the two biggest artists of this generation. This alone makes the brand impossible to replicate.</p>
+    </div>
+    <div class="card">
+      <h3>Network Moat</h3>
+      <p><strong>Combined access to 100+ A-list artists.</strong> Guest instructors, co-signs, exclusive content. When your education platform has actual hitmakers teaching, no competitor can match the authenticity.</p>
+    </div>
+    <div class="card">
+      <h3>Technology Moat</h3>
+      <p><strong>AI-powered from day one.</strong> While competitors build static courses, we build an adaptive learning engine backed by 30+ AI agents, 4 LLMs, and real-time analytics. The platform gets smarter every day.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:1.2rem; margin-top:3rem; margin-bottom:1rem;">Governance Structure</h3>
+  <table class="revenue-table">
+    <thead>
+      <tr>
+        <th>Domain</th>
+        <th>Lead</th>
+        <th>Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Curriculum & Education</td>
+        <td class="highlight">Khirye Tyler</td>
+        <td>Natural educator, multi-genre fluency, teaching methodology</td>
+      </tr>
+      <tr>
+        <td>Technology & AI Platform</td>
+        <td class="highlight">Larrance Dopson / 1500</td>
+        <td>Existing tech infrastructure, AI terminal, engineering team</td>
+      </tr>
+      <tr>
+        <td>Brand & Creative</td>
+        <td class="highlight">Joint</td>
+        <td>Both are creative visionaries &mdash; shared creative direction</td>
+      </tr>
+      <tr>
+        <td>Business Development</td>
+        <td class="highlight">Larrance Dopson / 1500</td>
+        <td>Broader business network, investor relationships, deal flow</td>
+      </tr>
+      <tr>
+        <td>Artist Development</td>
+        <td class="highlight">Khirye Tyler</td>
+        <td>Hands-on musician who understands artist journey from foster care to Grammy stage</td>
+      </tr>
+      <tr>
+        <td>Revenue & Finance</td>
+        <td class="highlight">Joint (AI-Assisted)</td>
+        <td>AI agents handle tracking/reporting; both approve strategic financial decisions</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PROPOSAL -->
+<section id="proposal">
+  <div class="section-label reveal">The Proposal</div>
+  <h2 class="section-title reveal">What We're Proposing</h2>
+  <p class="section-text">This isn't a pitch. It's an invitation to build something that has never existed &mdash; the operating system for how the world learns to create music.</p>
+
+  <h3 style="font-size:1.2rem; margin-top:2.5rem; margin-bottom:1rem;">First 90 Days After Handshake</h3>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="year">Day 1-15</div>
+      <h4>Foundation</h4>
+      <p>Entity formation (joint LLC or C-Corp). Equity split negotiation. Brand naming session. Domain and trademark filing. Activate AI agent terminal for Khirye.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">Day 15-30</div>
+      <h4>Content Sprint</h4>
+      <p>Record 5 flagship courses (Khirye: arrangement/multi-instrument mastery, Larrance: beat-making/production). Film brand story documentary content. Build email list + waitlist.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">Day 30-60</div>
+      <h4>Platform Build</h4>
+      <p>MVP education platform development. Integrate AI-powered learning paths. Set up payment processing. Beta test with 100 hand-selected users (from combined networks).</p>
+    </div>
+    <div class="timeline-item">
+      <div class="year">Day 60-90</div>
+      <h4>Soft Launch</h4>
+      <p>Launch to waitlist. First 1,000 subscribers target. PR push leveraging Grammy wins + Beyonce connection. University partnership pilot (3 schools). First revenue.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:1.2rem; margin-top:3rem; margin-bottom:1rem;">What Each Party Brings</h3>
+  <div class="analysis-grid">
+    <div class="analysis-col" style="border-left: 3px solid var(--gold);">
+      <h3 style="color: var(--gold);">RANCE / 1500 CONTRIBUTES</h3>
+      <div class="analysis-item">
+        <h4>Autonomous AI Infrastructure</h4>
+        <p>Full AI terminal with 30+ specialized agents, 4 integrated LLMs, and real-time execution capability</p>
+      </div>
+      <div class="analysis-item">
+        <h4>Production Legacy & Network</h4>
+        <p>Decades of credits, relationships with every major label, artist, and executive in the industry</p>
+      </div>
+      <div class="analysis-item">
+        <h4>Technical Development Team</h4>
+        <p>Platform engineering, DevOps, security infrastructure, and ongoing product development</p>
+      </div>
+      <div class="analysis-item">
+        <h4>Business Infrastructure</h4>
+        <p>1500 or Nothing brand recognition, studio facilities, existing revenue streams, and capital access</p>
+      </div>
+      <div class="analysis-item">
+        <h4>Strategic Vision & Capital</h4>
+        <p>Initial funding, investor introductions, and strategic advisory for scaling to $1B</p>
+      </div>
+    </div>
+    <div class="analysis-col" style="border-left: 3px solid var(--blue);">
+      <h3 style="color: var(--blue);">KHIRYE CONTRIBUTES</h3>
+      <div class="analysis-item">
+        <h4>Curriculum Design & Teaching</h4>
+        <p>Flagship courses, learning methodology, curriculum architecture across all genres</p>
+      </div>
+      <div class="analysis-item">
+        <h4>Beyonce Ecosystem Access</h4>
+        <p>Musical Director credentials, Parkwood network, Grammy-winning album credits</p>
+      </div>
+      <div class="analysis-item">
+        <h4>Multi-Instrument Mastery</h4>
+        <p>10+ instruments = 10+ course verticals. Each instrument is its own product line</p>
+      </div>
+      <div class="analysis-item">
+        <h4>RED Hands Band & Community</h4>
+        <p>Built-in performing ensemble, existing fanbase, live event capability</p>
+      </div>
+      <div class="analysis-item">
+        <h4>The Narrative</h4>
+        <p>Foster care to Grammy winner. This story drives media, inspires students, and attracts investors</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- MARKET CONTEXT -->
+<section>
+  <div class="section-label reveal">Market Opportunity</div>
+  <h2 class="section-title reveal">The Numbers Don't Lie</h2>
+
+  <div class="big-number-row">
+    <div class="big-number-card">
+      <div class="value">$20B</div>
+      <div class="desc">Online Music Education Market (2025)</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$101B</div>
+      <div class="desc">Projected by 2035</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">17.6%</div>
+      <div class="desc">Annual Growth Rate</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$572B</div>
+      <div class="desc">EdTech Market by 2034</div>
+    </div>
+  </div>
+
+  <h3 style="font-size:1.2rem; margin-top:2rem; margin-bottom:1rem;">Comparable Platforms</h3>
+  <table class="revenue-table">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Focus</th>
+        <th>Valuation / Revenue</th>
+        <th>Why We Win</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>MasterClass</strong></td>
+        <td>Celebrity-taught courses</td>
+        <td>$2.75B valuation (2022)</td>
+        <td>We go deeper: not just "watch a celebrity," but actually learn to produce at their level</td>
+      </tr>
+      <tr>
+        <td><strong>Splice</strong></td>
+        <td>Sounds & samples marketplace</td>
+        <td>$500M+ valuation, $100M+ ARR</td>
+        <td>Splice sells sounds. We sell the ability to CREATE sounds. Education + marketplace.</td>
+      </tr>
+      <tr>
+        <td><strong>Coursera</strong></td>
+        <td>University-partnered education</td>
+        <td>$1.5B market cap</td>
+        <td>Generic platform. No soul. No culture. No working producers teaching.</td>
+      </tr>
+      <tr>
+        <td><strong>Yousician</strong></td>
+        <td>AI music learning</td>
+        <td>$500M+ valuation</td>
+        <td>Beginner-focused instrument learning. No production. No industry connection.</td>
+      </tr>
+      <tr>
+        <td><strong>Ours</strong></td>
+        <td>Full-stack music creation education + tools + artist development</td>
+        <td class="highlight">$1B Target</td>
+        <td>Only platform with Grammy-winning producers + AI infrastructure + artist pipeline</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- THE PITCH -->
+<section id="pitch">
+  <div class="section-label reveal">The Conversation</div>
+  <h2 class="section-title reveal">What This Looks Like In Practice</h2>
+  <p class="section-text">This isn't a formal pitch. It's a real conversation between two producers who respect each other and see the same future.</p>
+
+  <div class="quote-block" style="margin-top:2rem;">
+    <p>"Khirye, I've been thinking about what you said &mdash; 'operating system for operating systems through education.' That's not just a concept. That's a company. And I think you and I are the only two people who can build it.</p>
+    <p style="margin-top:1rem;">Here's what I see. You have the vision and the methodology. You understand <em>how</em> to teach this. I have the catalog, the network, and the infrastructure. I've been doing this 20+ years. My phone has every A-list producer, every label head, every studio owner.</p>
+    <p style="margin-top:1rem;">What if we build this together? Not me investing in your thing. Not you joining my thing. Something new. Something we co-own.</p>
+    <p style="margin-top:1rem;">The platform we both wish existed when we were coming up. But built for the internet age. Built with AI. Built to become the standard &mdash; literally, <em>The Standard</em> &mdash; that every music program, every studio, every label eventually runs on.</p>
+    <p style="margin-top:1rem;">First 90 days, we do three things: build the MVP with 20 flagship courses &mdash; 10 from me, 10 from you. Lock in 5 more A-list producers as founding instructors. And close a seed round so we can hire real engineers.</p>
+    <p style="margin-top:1rem;">What do you think?"</p>
+    <div class="attribution">&mdash; The Pitch</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- EQUITY & DEAL TERMS -->
+<section>
+  <div class="section-label reveal">Deal Structure</div>
+  <h2 class="section-title reveal">Proposed Equity & Governance</h2>
+  <p class="section-text">A fair structure where both sides win. Designed for venture funding and long-term alignment.</p>
+
+  <table class="revenue-table" style="margin-top:2rem;">
+    <thead>
+      <tr>
+        <th>Stakeholder</th>
+        <th>Equity</th>
+        <th>Role</th>
+        <th>Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Khirye Tyler</strong></td>
+        <td class="highlight">35%</td>
+        <td>Founder & CEO</td>
+        <td>Vision originator. Full-time operator. Runs day-to-day operations, product, fundraising.</td>
+      </tr>
+      <tr>
+        <td><strong>Larrance Dopson</strong></td>
+        <td class="highlight">25%</td>
+        <td>Co-Founder & Chairman</td>
+        <td>Brand, network, credibility, studio infrastructure, creative direction, instructor recruitment.</td>
+      </tr>
+      <tr>
+        <td><strong>Employee Pool (ESOP)</strong></td>
+        <td class="highlight">15%</td>
+        <td>Engineering, Ops, Marketing</td>
+        <td>Attract world-class engineering and operations talent.</td>
+      </tr>
+      <tr>
+        <td><strong>Investor Pool</strong></td>
+        <td class="highlight">20%</td>
+        <td>Seed through Series B</td>
+        <td>Strategic investors from music and ed-tech industries.</td>
+      </tr>
+      <tr>
+        <td><strong>Advisory Pool</strong></td>
+        <td class="highlight">5%</td>
+        <td>Board Advisors</td>
+        <td>Industry advisors (Troy Carter, Scooter Braun tier). Ed-tech experts.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:2rem;">
+    <h3 style="font-size:1.1rem; margin-bottom:1rem;">Why This Works for Khirye</h3>
+    <ul class="styled-list">
+      <li>Gets the single most credible co-sign in modern production &mdash; no cold outreach ever again</li>
+      <li>Gets access to 500+ industry contacts unreachable alone</li>
+      <li>Gets studio infrastructure without capital expenditure</li>
+      <li>Gets a co-founder who doesn't want his job &mdash; no power struggle</li>
+      <li>35% of a company that could be worth <strong>$350M+</strong> to him personally</li>
+    </ul>
+  </div>
+
+  <div style="margin-top:2rem;">
+    <h3 style="font-size:1.1rem; margin-bottom:1rem;">Why This Works for Rance</h3>
+    <ul class="styled-list">
+      <li>Builds generational wealth beyond music &mdash; 25% of $1B = <strong>$250M</strong></li>
+      <li>Diversifies income away from session fees and royalties</li>
+      <li>Creates a legacy that outlasts any single record</li>
+      <li>Positions 1500 or Nothing as the most important production brand in history</li>
+      <li>Does what he already loves (teaching, mentoring) but at scale with equity upside</li>
+    </ul>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- DETAILED REVENUE MATH -->
+<section>
+  <div class="section-label reveal">Revenue Deep Dive</div>
+  <h2 class="section-title reveal">The Math Behind $100M ARR</h2>
+
+  <h3 style="font-size:1.1rem; margin-top:2rem; margin-bottom:1rem;">Engine 1: Education SaaS Subscriptions</h3>
+  <table class="revenue-table">
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Price</th>
+        <th>Target Users</th>
+        <th>Annual Revenue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Free (funnel)</td>
+        <td>$0/mo</td>
+        <td>150,000</td>
+        <td>$0 (conversion engine)</td>
+      </tr>
+      <tr>
+        <td>Basic</td>
+        <td>$29/mo</td>
+        <td>30,000</td>
+        <td class="highlight">$10.4M</td>
+      </tr>
+      <tr>
+        <td>Pro</td>
+        <td>$99/mo</td>
+        <td>10,000</td>
+        <td class="highlight">$11.9M</td>
+      </tr>
+      <tr>
+        <td>Elite (1-on-1 mentorship)</td>
+        <td>$299/mo</td>
+        <td>1,000</td>
+        <td class="highlight">$3.6M</td>
+      </tr>
+      <tr style="background: rgba(201,168,76,0.05);">
+        <td><strong>TOTAL</strong></td>
+        <td></td>
+        <td><strong>41,000 paid</strong></td>
+        <td class="highlight"><strong>$25.9M</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:1.1rem; margin-top:2rem; margin-bottom:1rem;">Engine 2: Tools Marketplace (25% Take Rate)</h3>
+  <table class="revenue-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Avg. Price</th>
+        <th>Platform Cut</th>
+        <th>Projected GMV</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Presets & Patches</td><td>$15-$50</td><td>25%</td><td>$20M</td></tr>
+      <tr><td>Sample Packs & Kits</td><td>$20-$100</td><td>25%</td><td>$25M</td></tr>
+      <tr><td>Plugins & VSTs</td><td>$50-$300</td><td>20%</td><td>$20M</td></tr>
+      <tr><td>Templates</td><td>$10-$50</td><td>25%</td><td>$15M</td></tr>
+      <tr style="background: rgba(201,168,76,0.05);">
+        <td><strong>NET REVENUE</strong></td><td></td><td></td><td class="highlight"><strong>$20M</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:1.1rem; margin-top:2rem; margin-bottom:1rem;">All 5 Engines Combined (Year 7)</h3>
+  <div class="big-number-row">
+    <div class="big-number-card">
+      <div class="value">$25M</div>
+      <div class="desc">Education SaaS</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$20M</div>
+      <div class="desc">Marketplace</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$25M</div>
+      <div class="desc">Artist Development</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$15M</div>
+      <div class="desc">Enterprise B2B</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$15M</div>
+      <div class="desc">IP & Content</div>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:1rem;">
+    <span style="font-family:'Playfair Display',serif; font-size:3rem; font-weight:900; color:var(--gold);">$100M ARR</span>
+    <p style="color:var(--gray); font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; margin-top:0.5rem;">At 10x Revenue Multiple = $1 Billion Valuation</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- RISK MATRIX -->
+<section>
+  <div class="section-label reveal">Transparency</div>
+  <h2 class="section-title reveal">Risk Matrix &mdash; Eyes Wide Open</h2>
+  <p class="section-text">Every great venture acknowledges its risks. Here are the top threats and how we neutralize each one.</p>
+
+  <table class="revenue-table" style="margin-top:2rem;">
+    <thead>
+      <tr>
+        <th>Risk</th>
+        <th>Probability</th>
+        <th>Impact</th>
+        <th>Mitigation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Co-founder misalignment</td>
+        <td><span class="badge badge-gold">Medium</span></td>
+        <td><span class="badge badge-red">Critical</span></td>
+        <td>Written co-founder agreement with vesting, buy-sell provisions, defined decision rights, independent board mediator</td>
+      </tr>
+      <tr>
+        <td>Instructor dependency</td>
+        <td><span class="badge badge-red">High</span></td>
+        <td><span class="badge badge-gold">High</span></td>
+        <td>Recruit 5+ instructors from Day 1. By Year 2, founders should be &lt;30% of total content</td>
+      </tr>
+      <tr>
+        <td>Low course completion rates</td>
+        <td><span class="badge badge-red">High</span></td>
+        <td><span class="badge badge-gold">High</span></td>
+        <td>Cohort-based learning, gamification, AI-adaptive pacing, career incentives for completion</td>
+      </tr>
+      <tr>
+        <td>MasterClass / Skillshare copies model</td>
+        <td><span class="badge badge-gold">Medium</span></td>
+        <td><span class="badge badge-gold">Medium</span></td>
+        <td>They can copy features, not credibility. Our instructors ARE the brand. First-mover on community + data</td>
+      </tr>
+      <tr>
+        <td>AI makes producers obsolete</td>
+        <td><span class="badge badge-blue">Low-Med</span></td>
+        <td><span class="badge badge-red">Critical</span></td>
+        <td>Lean INTO AI, not away. Platform teaches how to use AI tools. More people creating = larger market</td>
+      </tr>
+      <tr>
+        <td>Fundraising failure</td>
+        <td><span class="badge badge-gold">Medium</span></td>
+        <td><span class="badge badge-gold">High</span></td>
+        <td>Bootstrap with course revenue. Studio reduces costs. Revenue-based financing as alternative</td>
+      </tr>
+      <tr>
+        <td>Key person unavailability</td>
+        <td><span class="badge badge-blue">Low</span></td>
+        <td><span class="badge badge-red">Critical</span></td>
+        <td>Key person insurance. Cross-train team. Build knowledge into curriculum engine, not just founder brains</td>
+      </tr>
+      <tr>
+        <td>IP theft / piracy</td>
+        <td><span class="badge badge-red">High</span></td>
+        <td><span class="badge badge-gold">Medium</span></td>
+        <td>Live elements (mentorship, AI tools, certification) cannot be pirated. Static content is just the funnel</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="quote-block" style="margin-top:2rem;">
+    <p>"This is not a moonshot. This is an <em>obvious</em> company that no one has built yet because the two types of people who could build it &mdash; world-class producers and world-class technologists &mdash; don't usually meet. Until now."</p>
+    <div class="attribution">&mdash; Strategic Assessment</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- COMBINED VENTURE PROJECTIONS -->
+<section>
+  <div class="section-label reveal">Financial Projections</div>
+  <h2 class="section-title reveal">Combined Venture Revenue Projections</h2>
+  <p class="section-text reveal">Conservative and aggressive scenarios for the joint venture, factoring in existing 1500 Sound Academy infrastructure, combined brand equity, and AI-powered scale.</p>
+
+  <table class="revenue-table reveal" style="margin-top:2rem;">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Conservative</th>
+        <th>Base Case</th>
+        <th>Aggressive</th>
+        <th>Key Drivers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Year 1</strong></td>
+        <td>$1.1M</td>
+        <td class="highlight">$1.8M</td>
+        <td>$2.6M</td>
+        <td>Platform launch, first 5K paid subs, 3 university pilots</td>
+      </tr>
+      <tr>
+        <td><strong>Year 2</strong></td>
+        <td>$3.5M</td>
+        <td class="highlight">$6.2M</td>
+        <td>$11M</td>
+        <td>Marketplace launch, 20K paid subs, B2B traction</td>
+      </tr>
+      <tr>
+        <td><strong>Year 3</strong></td>
+        <td>$8M</td>
+        <td class="highlight">$15M</td>
+        <td>$23M</td>
+        <td>Artist development revenue, 50K+ paid subs, international</td>
+      </tr>
+      <tr>
+        <td><strong>Year 5</strong></td>
+        <td>$44M</td>
+        <td class="highlight">$78M</td>
+        <td>$128M</td>
+        <td>Enterprise contracts, content deals, platform dominance</td>
+      </tr>
+      <tr style="background: rgba(201,168,76,0.05);">
+        <td><strong>Year 7</strong></td>
+        <td>$85M</td>
+        <td class="highlight"><strong>$150M</strong></td>
+        <td>$280M</td>
+        <td>IPO-ready, global standard, vertical integration</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="big-number-row reveal" style="margin-top:2rem;">
+    <div class="big-number-card" style="animation: pulse-glow 3s ease-in-out infinite;">
+      <div class="value">$1.5B</div>
+      <div class="desc">Base Case Valuation (Year 7, 10x Rev)</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$525M</div>
+      <div class="desc">Khirye's 35% Equity Value</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">$375M</div>
+      <div class="desc">Rance's 25% Equity Value</div>
+    </div>
+    <div class="big-number-card">
+      <div class="value">5-7 yrs</div>
+      <div class="desc">Timeline Compressed by Partnership</div>
+    </div>
+  </div>
+
+  <div class="quote-block reveal" style="margin-top:2rem;">
+    <p>"Alone, Khirye reaches $5M in 5 years. Together, we reach $150M in 7. The partnership doesn't add value &mdash; it multiplies it. This is not 1+1=2. This is 1+1=100."</p>
+    <div class="attribution">&mdash; Financial Intelligence Assessment</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="section-label">Next Step</div>
+  <h2 class="section-title">Let's Build This Together</h2>
+  <p style="color: var(--gray-light); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">The window is open. Grammy momentum is at its peak. The technology is ready. The market is starving for what only we can build. One conversation changes everything.</p>
+  <a href="mailto:rance1500@gmail.com?subject=Billion%20Dollar%20Blueprint%20-%20Let's%20Talk&body=Khirye%20-%20I%20saw%20the%20blueprint.%20Let's%20connect." class="cta-btn">Start the Conversation</a>
+  <p style="color: var(--gray); font-size: 0.8rem; margin-top: 1.5rem;">rance1500@gmail.com &bull; 1500 or Nothing</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.5rem;">1500 OR NOTHING &times; BLACK SUIT MUSIC</p>
+  <p>Confidential Strategic Document &bull; February 2026</p>
+  <p style="margin-top: 0.5rem;">Prepared by the VLTRN Autonomous Intelligence System</p>
+  <p style="margin-top: 1rem; font-size: 0.65rem; color: rgba(201,168,76,0.3); letter-spacing: 2px;">VLTRN x INFINITE ARK &bull; AGENT-POWERED INTELLIGENCE</p>
+</footer>
+
+<!-- SCROLL ANIMATIONS + PROGRESS BAR -->
+<script>
+// Scroll progress bar
+window.addEventListener('scroll', () => {
+  const prog = document.getElementById('scrollProgress');
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const s = window.scrollY;
+  if (prog && h > 0) prog.style.width = (s / h * 100) + '%';
+});
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Auto-add reveal to major elements
+document.querySelectorAll('.section-label, .section-title, .section-text, .card, .analysis-col, .partner-card, .quote-block, .timeline-item, .big-number-card, .tech-item').forEach((el, i) => {
+  if (!el.classList.contains('reveal') && !el.classList.contains('visible')) {
+    el.classList.add('reveal');
+    observer.observe(el);
+  }
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('open');
+  });
+});
+
+// Smooth number counter for hero stats
+function animateCounters() {
+  document.querySelectorAll('.hero-stat .number').forEach(el => {
+    const text = el.textContent;
+    if (text.includes('M+') || text.includes('$') || text.includes('x')) return;
+    const target = parseInt(text);
+    if (isNaN(target)) return;
+    let current = 0;
+    const step = Math.ceil(target / 30);
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = current;
+    }, 40);
+  });
+}
+// Run counters when hero is visible
+const heroObs = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) { animateCounters(); heroObs.disconnect(); }
+}, { threshold: 0.5 });
+const heroEl = document.querySelector('.hero');
+if (heroEl) heroObs.observe(heroEl);
+</script>
+
+</body>
+</html>
